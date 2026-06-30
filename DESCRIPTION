@@ -1,0 +1,34 @@
+Package: bc_address_geocoder_r
+Title: Interface to the BC Batch Geocoder Service
+Version: 0.0.0.9000
+Authors@R:
+  person(
+    given = "Stephanie",
+    family = "Yurchak",
+    role = c("aut", "cre")
+  )
+Description: Provides a simple interface to the BC Batch Geocoder
+  web service for submitting batch geocoding jobs, monitoring their
+  status, and downloading completed results. Based on the python code,
+  ols-devkit/als/batch_address_list_submitter_py3_3.py, and translated 
+  with the help of AI.
+License: Apache License (>= 2)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends:
+  R (>= 4.3.0)
+Imports:
+  dplyr,
+  fs,
+  glue,
+  httr2,
+  purrr,
+  rlang,
+  stringr,
+  tibble,
+  yaml
+Suggests:
+  testthat (>= 3.0.0),
+  withr
+Config/testthat/edition: 3
