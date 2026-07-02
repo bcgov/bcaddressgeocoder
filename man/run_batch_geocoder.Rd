@@ -39,4 +39,3 @@ Sequential batch pipeline:
 
 Failures are logged but do not stop execution.
 }
-\keyword{internal}

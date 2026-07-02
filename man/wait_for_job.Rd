@@ -56,4 +56,3 @@ wait_for_job(job_id)
 \seealso{
 \code{\link{submit_job}}, \code{\link{geocoder_request}}
 }
-\keyword{internal}

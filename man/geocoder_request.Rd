@@ -41,3 +41,4 @@ req <- geocoder_request("/batch/jobs")
 }
 
 }
+\keyword{internal}

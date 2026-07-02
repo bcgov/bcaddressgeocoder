@@ -44,4 +44,3 @@ download_results(job_id, "results.csv")
 \seealso{
 \code{\link{submit_job}}, \code{\link{wait_for_job}}
 }
-\keyword{internal}

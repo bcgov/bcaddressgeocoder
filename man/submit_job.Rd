@@ -48,4 +48,3 @@ job_id <- submit_job("addresses.csv")
 \seealso{
 \code{\link{configure_geocoder}}, \code{\link{geocoder_request}}
 }
-\keyword{internal}
