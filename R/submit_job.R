@@ -51,7 +51,7 @@
 #' job_id <- submit_job("addresses.csv")
 #' }
 #'
-#' @keywords internal
+#' @export
 #'
 submit_job <- function(file) {
   

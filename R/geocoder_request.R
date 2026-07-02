@@ -42,7 +42,7 @@
 #' req <- geocoder_request("/batch/jobs")
 #' }
 #'
-#' @export
+#' @keywords internal
 geocoder_request <- function(path = "") {
   
   httr2::request(paste0(.geocoder$service_url, path)) |>

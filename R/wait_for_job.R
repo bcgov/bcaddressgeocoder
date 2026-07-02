@@ -57,7 +57,7 @@
 #' wait_for_job(job_id)
 #' }
 #'
-#' @keywords internal
+#' @export
 #'
 wait_for_job <- function(job_id,
                          timeout = 600) {

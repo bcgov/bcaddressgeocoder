@@ -46,7 +46,7 @@
 #' download_results(job_id, "results.csv")
 #' }
 #'
-#' @keywords internal
+#' @export
 #'
 download_results <- function(job_id,
                              output_file) {

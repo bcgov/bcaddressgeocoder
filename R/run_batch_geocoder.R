@@ -38,7 +38,7 @@
 #' @importFrom tibble tibble
 #' @importFrom fs path path_file path_ext_remove
 #'
-#' @keywords internal
+#' @export
 run_batch_geocoder <- function(input_dir,
                                output_dir,
                                pattern = "cleaned_part\\d*.csv",
