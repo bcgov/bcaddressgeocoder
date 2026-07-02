@@ -54,18 +54,18 @@ download_results <- function(job_id,
   results <- geocoder_request(
     paste0("jobs/", job_id, "/results.json")
   ) |>
-    req_perform() |>
-    resp_body_json()
+    httr2::req_perform() |>
+    httr2::resp_body_json()
   
   url <- results$resources[[1]]$resourceUri
   
-  raw <- request(url) |>
-    req_auth_digest(
-      .geocoder$username,
-      .geocoder$password
+  raw <- httr2::request(url) |>
+    httr2::req_options(
+      httpauth = 2L,
+      userpwd = paste(.geocoder$username, .geocoder$password, sep = ":")
     ) |>
-    req_perform() |>
-    resp_body_raw()
+    httr2::req_perform() |>
+    httr2::resp_body_raw()
   
   writeBin(raw, output_file)
   

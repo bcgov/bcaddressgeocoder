@@ -69,8 +69,8 @@ wait_for_job <- function(job_id,
     status <- geocoder_request(
       paste0("jobs/", job_id, ".json")
     ) |>
-      req_perform() |>
-      resp_body_json()
+      httr2::req_perform() |>
+      httr2::resp_body_json()
     
     if (status$jobStatus == "resultsCreated")
       return(invisible(job_id))
@@ -82,7 +82,7 @@ wait_for_job <- function(job_id,
     if (elapsed > timeout)
       stop("Job timed out.")
     
-    wait <- rlang::coalesce(status$secondsToWaitForStatusCheck, 5)
+    wait <- dplyr::coalesce(status$secondsToWaitForStatusCheck, 5)
     
     Sys.sleep(min(max(wait, 1), 30))
   }

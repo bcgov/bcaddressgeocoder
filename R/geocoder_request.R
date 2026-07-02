@@ -45,7 +45,7 @@
 #' @export
 geocoder_request <- function(path = "") {
   
-  request(paste0(.geocoder$service_url, path)) |>
+  httr2::request(paste0(.geocoder$service_url, path)) |>
     httr2::req_options(
       httpauth = 2L,
       userpwd = paste(.geocoder$username, .geocoder$password, sep = ":")
@@ -69,10 +69,6 @@ geocoder_request <- function(path = "") {
 #' \preformatted{
 #' YYYY/MM/DD|HH:MM:SS|message
 #' }
-#'
-#' @examples
-#' log_message("Starting job %s", "ABC123")
-#' log_message("Processed %d records", 100)
 #'
 #' @keywords internal
 #'

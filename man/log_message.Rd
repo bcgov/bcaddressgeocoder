@@ -25,9 +25,4 @@ The log format is:
 YYYY/MM/DD|HH:MM:SS|message
 }
 }
-\examples{
-log_message("Starting job \%s", "ABC123")
-log_message("Processed \%d records", 100)
-
-}
 \keyword{internal}

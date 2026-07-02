@@ -72,17 +72,17 @@ submit_job <- function(file) {
   }
   
   req <- geocoder_request("apps/geocoder/multiple.json") |>
-    req_body_multipart(
+    httr2::req_body_multipart(
       !!!fields,
       inputData = curl::form_file(file)
     )
   
-  resp <- req_perform(req)
+  resp <- httr2::req_perform(req)
   
   job <- stringr::str_match(resp$url, "/jobs/(\\d+)/")[,2]
   
   if (is.na(job)) {
-    body <- resp_body_json(resp)
+    body <- httr2::resp_body_json(resp)
     job <- stringr::str_match(body$id, "/jobs/(\\d+)/")[,2]
   }
   
