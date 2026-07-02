@@ -1,6 +1,6 @@
 [![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-# bc_address_geocoder_r
+# bcAddressGeocodeR
 
 This package is for interacting with the 
 [**BC Address Batch Geocoder Service**](https://www2.gov.bc.ca/gov/content/data/geographic-data-services/location-services/geocoder),
@@ -27,7 +27,7 @@ and translated with the help of AI.
 Install the development version from GitHub:
 
 ```r
-remotes::install_github("bcgov/bc_address_geocoder_r")
+remotes::install_github("bcgov/bcAddressGeocodeR")
 ```
 ## Usage
 ### 1. Configure credentials
