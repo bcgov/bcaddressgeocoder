@@ -1,4 +1,4 @@
-Package: bcAddressGeocodeR
+Package: bcaddressgeocoder
 Title: Interface to the BC Batch Geocoder Service
 Version: 0.0.0.9000
 Authors@R: c(
